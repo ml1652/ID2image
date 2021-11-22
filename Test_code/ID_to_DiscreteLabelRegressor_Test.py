@@ -2,7 +2,7 @@ from models.regressors import CelebaRegressor
 from models.latent_optimizer import VGGFaceProcessing
 from models.vgg_face2 import resnet50_scratch_dag
 import torch
-from utilities.images import load_images, images_to_video, save_image
+from utilities.images import load_images
 from glob import glob
 import numpy as np
 import pandas as pd

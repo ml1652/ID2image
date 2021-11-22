@@ -4,7 +4,7 @@ import cv2
 from utilities.images import load_images
 from models.latent_optimizer import VGGFaceProcessing
 from models.vgg_face2 import resnet50_scratch_dag
-from InterFaceGAN.models.stylegan_generator import StyleGANGenerator
+from interfacegan.models.stylegan_generator import StyleGANGenerator
 from models.regressors import VGGToLatent
 from collections import defaultdict
 

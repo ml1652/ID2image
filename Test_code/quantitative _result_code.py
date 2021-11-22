@@ -281,7 +281,7 @@ def Histregressor_Test():
         vgg_features = image_to_Vggencoder(reference_image)
 
         if calculate_guess == True:
-            Target_Hist = np.load("C:/Users/Mingrui/Desktop/Result_for_Paper/3.1Result/average_histogram.npy")
+            Target_Hist = np.load("./average_histogram.npy")
             Target_Hist = torch.from_numpy(Target_Hist).unsqueeze(0).detach().cpu()
         else:
             Target_Hist = generate_image_hist(reference_image, bins_num)
