@@ -2,12 +2,10 @@ from models.regressors import ImageToLandmarks_batch
 import torch
 from glob import glob
 import numpy as np
-import cv2
-import os
 from PIL import Image
 import torch.nn.functional as F
 from torchvision import transforms
-from Draw_face_landmark import draw_face_landmark
+from draw_face_landmark import draw_face_landmark
 
 
 class LoadImages(torch.utils.data.Dataset):

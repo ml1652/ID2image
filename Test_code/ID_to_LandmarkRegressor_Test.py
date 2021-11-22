@@ -4,8 +4,7 @@ from models.vgg_face2 import resnet50_scratch_dag
 import torch
 from utilities.images import load_images, images_to_video, save_image
 from glob import glob
-
-from Draw_face_landmark import draw_face_landmark
+from draw_face_landmark import draw_face_landmark
 
 image_directory = ""
 filenames = glob(image_directory + "*.jpg")
