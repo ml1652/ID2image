@@ -1,20 +1,10 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue May 12 17:44:28 2020
-
-@author: Mingrui
-"""
-
-from InterFaceGAN.models.stylegan_generator import StyleGANGenerator
-from models.latent_optimizer import PostSynthesisProcessing
-from models.image_to_latent import ImageToLatent, ImageLatentDataset
+from models.regressors import ImageToLatent, ImageLatentDataset
 from models.losses import LogCoshLoss
 from torchvision import transforms
-import matplotlib.pyplot as plt
 import torch
 from glob import glob
 from tqdm import tqdm_notebook as tqdm
-#from tqdm.notebook import tqdm
 import numpy as np
 
 
@@ -87,7 +77,7 @@ for epoch in progress_bar:
     progress_bar.set_description("Step: {0}, Loss: {1:4f}, Validation Loss: {2:4f}".format(i, running_loss / i, validation_loss))
 
 #save moodel 
-torch.save(image_to_latent.state_dict(), "C:/Users/Mingrui/Desktop/Github/pytorch_stylegan_encoder/image_to_latent.pt")
+torch.save(image_to_latent.state_dict(), "./image_to_latent.pt")
 
 #load Model 
 image_to_latent = ImageToLatent(image_size).cuda()

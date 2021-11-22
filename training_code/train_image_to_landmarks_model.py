@@ -3,8 +3,7 @@ import matplotlib.pyplot as plt
 import torch
 import numpy as np
 import pandas as pd
-
-from models.image_to_latent import ImageToLandmarks
+from models.regressors import ImageToLandmarks_batch
 from torchvision import transforms
 from tqdm import tqdm
 from PIL import Image
@@ -69,9 +68,9 @@ train_generator = torch.utils.data.DataLoader(train_dataset, batch_size=16)
 validation_generator = torch.utils.data.DataLoader(validation_dataset, batch_size=16)
 
 # Instantiate Model
-image_to_latent = ImageToLandmarks(landmark_num=68).cuda()
+image_to_latent = ImageToLandmarks_batch(landmark_num=68).cuda()
 optimizer = torch.optim.SGD(image_to_latent.parameters(), lr=3e-6, weight_decay=5e-4,
-                            momentum=0.9)  # L2: lr=3e-6 otherloss: lr=3e-5
+                            momentum=0.9)
 criterion = torch.nn.MSELoss()
 # Train Model
 epochs = 150
@@ -93,7 +92,7 @@ for epoch in progress_bar:
         try:
             optimizer.zero_grad()
             images, latents = images.cuda(), latents.cuda()
-            pred_latents = image_to_latent(images)  # max= 2.6226 min = -2.1179
+            pred_latents = image_to_latent(images)
             loss = criterion(pred_latents.double(), latents.double())
             loss.backward()
             optimizer.step()
@@ -136,7 +135,7 @@ for epoch in progress_bar:
 
 # save moodel
 torch.save(image_to_latent.state_dict(),
-           f"C:/Users/Mingrui/Desktop/Github/pytorch_stylegan_encoder/Trained_model/Image_to_landmarks_Regressor_new.pt")
+           "./Trained_model/image_to_landmarks_regressor.pt")
 
 
 # plot the loss at certain intervals
