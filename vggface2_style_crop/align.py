@@ -18,7 +18,7 @@ import tqdm
 parser = argparse.ArgumentParser()
 parser.add_argument('--img_dir', dest='img_dir', default='./dataset')
 parser.add_argument('--save_dir', dest='save_dir',
-                    default=r"./cropped_dataset")
+                    default="./cropped_dataset")
 parser.add_argument('--landmark_file', dest='landmark_file', default='./data/landmark.txt')
 parser.add_argument('--standard_landmark_file', dest='standard_landmark_file',
                     default='./dataset/standard_landmark_68pts.txt')
