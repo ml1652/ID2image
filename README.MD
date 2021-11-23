@@ -17,7 +17,7 @@ In this projecct, we present an optimisation strategy that uses a StyleGAN gener
 We begin by exploring to what extent we are able to esti-mate non-ID “attributes” from an ID descriptor provided by a pretrained face encoder CNN. We use “attribute” here in very general terms,  including image-based attributes suchas  landmark  positions  and  colour  histograms  and  non-ID 
 face attributes such as the presence or absence of a smile,glasses or hat. 
 
-<img src="assets/attribute_prediction.png">
+<img src="assets/attribute_prediction.png" width="256px" height="200px">
 
 For each attribute, we train an MLP that
 maps from an ID descriptor to the target attribute. All the 
@@ -39,7 +39,7 @@ In this project we trained several regressor including landmark  positions  and 
 face attributes such as the smile, glasses or hat. The training script can be find in [training_code](https://github.com/ml1652/ID2image/tree/main/training_code) folder. Our trained model can be found [here](https://www.robots.ox.ac.uk/~albanie/pytorch-models.html).
 
 ## Image Reconstructed from ID with a generative model 
-<img src="assets/Non-ID attribute prediction through an ID bottleneck.png">
+<img src="assets/Non-ID attribute prediction through an ID bottleneck.png" width="256px" height="200px">
 Take an face image you'd like to inversed. Then you align and crop the face image in an VGG Face style.
 Then you can inversion this face image from a face descriptor by using the ID_encode_to_image.py script.
 ```bash
@@ -76,7 +76,7 @@ arguments:
   
   --save_file_name      the folder used to save results
 ```
-<img src="assets/example_reconstruct_result.png">
+<img src="assets/example_reconstruct_result.png" width="256px" height="200px">
 ###### Example inversion result with original target image, reconstructions using only ID loss, ID + Landmark loss and full reconstruction loss.
 
 
