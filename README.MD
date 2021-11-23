@@ -76,6 +76,8 @@ arguments:
   
   --save_file_name      the folder used to save results
 ```
+<img src="assets/example_reconstruct_result.png">
 
+###### Example inversion result with original target image, reconstructions using only ID loss, ID + Landmark loss and full reconstruction loss.
 
 
