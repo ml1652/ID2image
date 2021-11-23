@@ -40,8 +40,10 @@ At the same time, because the position of the face landmark points after croppin
 In this project we trained several regressor including landmark  positions  and  colour  histograms  and  non-ID 
 face attributes such as the smile, glasses or hat. The training script can be find in [training_code](https://github.com/ml1652/ID2image/tree/main/training_code) folder. Our trained model can be found [here](https://www.robots.ox.ac.uk/~albanie/pytorch-models.html).
 
-## Image Reconstructed from ID with a generative model 
-<img src="assets/Non-ID attribute prediction through an ID bottleneck.png" width="768px" height="432px" align=center>
+## Image Reconstructed from ID with a generative model
+<p align="center">
+  <img src="assets/Non-ID attribute prediction through an ID bottleneck.png" width="768px" height="432px" align=center>
+</p>
 Take an face image you'd like to inversed. Then you align and crop the face image in an VGG Face style.
 Then you can inversion this face image from a face descriptor by using the ID_encode_to_image.py script.
 ```bash
@@ -78,8 +80,9 @@ arguments:
   
   --save_file_name      the folder used to save results
 ```
-<img src="assets/example_reconstruct_result.png" width = "689" height = "246" align=center>
-
+<p align="center">
+  <img src="assets/example_reconstruct_result.png" width = "689" height = "246" align=center>
+</p>
 
 ###### Example inversion result with original target image, reconstructions using only ID loss, ID + Landmark loss and full reconstruction loss.
 
