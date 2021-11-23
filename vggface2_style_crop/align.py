@@ -43,7 +43,7 @@ def draw_face_landmark(name, landmarkToPaint, img_crop):
     # draw face's landmark
     point_size = 1
     point_color = (0, 0, 255)  # BGR
-    thickness = 4  # 可以为 0 、4、8
+    thickness = 4
     name_landmark_str = name
     for point in landmarkToPaint:
         point1 = int(point[0])

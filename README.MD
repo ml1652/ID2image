@@ -1,5 +1,5 @@
 # ID2image: Leakage of non-ID information into face descriptors and inversion from descriptors to images
-we present an optimisation strategy that uses a StyleGAN generative model to  recover images from an ID embedding.
+In this projecct, we present an optimisation strategy that uses a StyleGAN generative model to  recover images from an ID embedding.
 
 ## Requirments
 - pytorch = 0.10.0
