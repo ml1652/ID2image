@@ -17,7 +17,7 @@ In this projecct, we present an optimisation strategy that uses a StyleGAN gener
 We begin by exploring to what extent we are able to esti-mate non-ID “attributes” from an ID descriptor provided by a pretrained face encoder CNN. We use “attribute” here in very general terms,  including image-based attributes suchas  landmark  positions  and  colour  histograms  and  non-ID 
 face attributes such as the presence or absence of a smile,glasses or hat. 
 
-<img src="assets/attribute_prediction.pdf">
+<img src="assets/attribute_prediction.png">
 
 For each attribute, we train an MLP that
 maps from an ID descriptor to the target attribute. All the 
@@ -77,7 +77,6 @@ arguments:
   --save_file_name      the folder used to save results
 ```
 <img src="assets/example_reconstruct_result.png">
-
 ###### Example inversion result with original target image, reconstructions using only ID loss, ID + Landmark loss and full reconstruction loss.
 
 
