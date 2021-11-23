@@ -1,4 +1,4 @@
-#ID2image: Leakage of non-ID information into face descriptors and inversion from descriptors to images
+# ID2image: Leakage of non-ID information into face descriptors and inversion from descriptors to images
 we present an optimisation strategy that uses a StyleGAN generative model to  recover images from an ID embedding.
 
 ## Requirments
@@ -52,3 +52,10 @@ arguments:
 ```
 ## Non-ID attribute prediction from ID
 We begin by exploring to what extent we are able to esti-mate non-ID “attributes” from an ID descriptor provided by a pretrained face encoder CNN. We use “attribute” here in very general terms,  including image-based attributes suchas  landmark  positions  and  colour  histograms  and  non-IDface attributes such as the presence or absence of a smile,glasses  or  hat. 
+
+For each attribute, we train an MLP that
+maps from an ID descriptor to the target attribute. All the 
+MLPs are trained on [CelebA](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html), We aligned
+and cropped the original CelebA to a VGGFace2 compatible version and scaled all images to resolution 224. 
+
+The code for image alignment and cropping can be viewed in the [vggface2_style_crop]() folder.
