@@ -46,7 +46,7 @@ face attributes such as the smile, glasses or hat. The training script can be fi
 </p>
 Take an face image you'd like to inversed. Then you align and crop the face image in an VGG Face style.
 Then you can inversion this face image from a face descriptor by using the ID_encode_to_image.py script.
-```bash
+```console
 python ID_encode_to_image.py 
 "test_image.jpg" 
 --save_file_name inversion_result # The folder name use to save the result image and plot at.
