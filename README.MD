@@ -9,7 +9,7 @@ In this project, we present an optimisation strategy that uses a StyleGAN genera
 ## Model Zoo
 - The models are available for non-commercial research purposes only.  
 - All models can be found in here.  
-    - Regressors for Non-ID attribute prediction of CelebA: [GDrive](https://drive.google.com/drive/folders/15bqQhs3_yiUYwkP8lp3vFz9fkHKHsLPU?usp=sharing) (the training code can be found in this repository)
+    - Regressors for Non-ID attribute prediction of CelebA: [GDrive](https://drive.google.com/drive/folders/1lopJ-vQxibWbTVOXwse02gZ1nTiN3ka7?usp=sharing) (the training code can be found in this repository)
     - Pretrained VGGface and VGGface2 model from [https://www.robots.ox.ac.uk/~albanie/pytorch-models.html](https://www.robots.ox.ac.uk/~albanie/pytorch-models.html)
     - Dlib 68-points Face landmark model from [http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2](http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2)
 
